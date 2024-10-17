@@ -1,52 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #780206, #061161);
+            margin: 0;
+            color: white;
+        }
+
+        .form-container {
+            background-color: rgba(20, 30, 48, 0.4);
+            padding: 40px; /* Padding */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 800px; /* Width */
+            max-width: 100%; /* Maximum Width */
+            box-sizing: border-box; /* Box Sizing */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px; /* Space below title */
+        }
+        .form-group {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        .form-group label {
+            width: 140px; /* Label Width */
+            margin-right: 10px; /* Space between label and input */
+        }
+
+        .form-group input {
+            flex: 1; /* Input Field Width */
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: rgba(5, 12, 24, 0.4);
+            color: white;
+            border-radius: 4px;
+        }
+
+        .row {
+            display: flex; /* Flexbox for two input fields */
+            justify-content: space-between; /* Space distribution */
+        }
+
+        .gender {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.gender .form-group {
+    display: flex;
+    align-items: center;
+}
+
+.gender label {
+    margin-left: 5px;
+}
+
+        button {
+            background: linear-gradient(to right, #780206, #061161);
+            color: white;
+            border: none;
+            padding: 12px; /* Button Padding */
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px; /* Margin for button */
+        }
+        button:hover{
+            background: linear-gradient(to right, #061161, #780206);
+        }
+        hr{
+            border: none; /* Remove default border */
+            border-top: 0.1px solid #ffffff22; /* Set the top border to 0.1px solid */
+           margin-bottom: 40px;
+            
+        }
+    </style>
 </head>
-<link rel="stylesheet" href="www.fb.com">
 <body>
-    <h1>hello</h1>
-    <div class="card">
-        <form action="#">
-            <h2>Registration Form</h2>
+    <div class="form-container">
+        <h2>Registration Form</h2> 
+        <hr>
+        <form>
             <div class="row">
                 <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required>
+                    <label for="input1">Full Name</label>
+                    <input type="text" id="input1" placeholder="Enter Full Name">
                 </div>
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-            </div> /*comments*/
-            
-            <div class="row">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <label for="input2">Username</label>
+                    <input type="text" id="input2" placeholder="Enter Username">
                 </div>
             </div>
-            
             <div class="row">
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="input3">Email</label>
+                    <input type="email" id="input3" placeholder="Enter Email">
                 </div>
                 <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <label for="input4">Phone Number</label>
+                    <input type="tel" id="input4" placeholder="Enter Phone Number">
                 </div>
             </div>
-            
+
+            <div class="row">
+                <div class="form-group">
+                    <label for="input1">Password</label>
+                    <input type="password" id="input5" placeholder="Enter Password">
+                </div>
+                <div class="form-group">
+                    <label for="input2">Confirm Password</label>
+                    <input type="password" id="input6" placeholder="Confirm Password">
+                </div>
+            </div>
+
+
             <div class="row gender">
-                <label>Gender:</label>
+                <label>Gender</label>
                 <div class="form-group">
                     <input type="radio" id="male" name="gender" value="male" required>
                     <label for="male">Male</label>
@@ -60,7 +144,6 @@
                     <label for="other">Other</label>
                 </div>
             </div>
-
             <button type="submit">Submit</button>
         </form>
     </div>
